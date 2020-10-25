@@ -8,11 +8,10 @@ public class TrackTileController : MonoBehaviour
 
     void OnTriggerEnter(Collider other) // on a collision between this objects rigidbody and another objects rigidbody
     {
-        Debug.Log("Collision detected");
+        Debug.Log("Track Tile collision detected");
         
-        if (other.gameObject.CompareTag("Train"))
+        if (other.gameObject.CompareTag("TrainHorn"))
         {
-            Debug.Log("PLayer collision detected");
             audioManager.PlayTrainHornClip();
         }
     }
