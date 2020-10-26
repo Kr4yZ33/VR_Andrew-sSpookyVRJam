@@ -7,6 +7,14 @@ TagManager:
   - Train
   - TrainHorn
   - Waterfall
+  - CandyForrestParent
+  - MineParent
+  - DisableCF
+  - EnableCF
+  - DisableMine
+  - EnableMine
+  - JumpScare
+  - Swarm
   layers:
   - Default
   - TransparentFX

@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject mineParent;
+    public GameObject cfParent;
+
+
+    public void DisableCandyForrest()
     {
-        
+        Debug.Log("CF enable");
+        GameObject.FindGameObjectWithTag("CandyForrestParent").SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EnableCandyForrest()
     {
-        // enable and disable objects in different areas
+        Debug.Log("CF disable");
+        cfParent.SetActive(true);
     }
+
+    public void DisableMine()
+    {
+        Debug.Log("Mine disable");
+        GameObject.FindGameObjectWithTag("MineParent").SetActive(false);
+    }
+
+    public void EnableMine()
+    {
+        Debug.Log("Mine enable");
+        mineParent.SetActive(true);
+    }
+
 }
