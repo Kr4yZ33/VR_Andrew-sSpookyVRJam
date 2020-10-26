@@ -21,6 +21,10 @@ TagManager:
   - LightsOn
   - LightsOff
   - TenseMusic
+  - JumpScareFinish
+  - WitchCackle
+  - Spawner
+  - SwarmOff
   layers:
   - Default
   - TransparentFX
@@ -55,6 +59,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BlackOut
+    uniqueID: 3345399909
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

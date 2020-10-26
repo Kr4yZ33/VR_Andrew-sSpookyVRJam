@@ -6,6 +6,8 @@ public class AudioManager : MonoBehaviour
 {
     public AudioSource audioSource; // Reference to our Audio Source
     public AudioClip trainHorn; // reference to our idle clip
+    public AudioClip tenseMusic;
+    public AudioClip witchCackle;
     AudioClip currentTrack; // the current track being played
     AudioClip previousTrack; // the previous track that was played
     public float volume = 0.5f; // Reference to the volume of our scare shot clip (plays over game musice that is already playing)
@@ -17,6 +19,24 @@ public class AudioManager : MonoBehaviour
             return;
         }
         audioSource.PlayOneShot(trainHorn, volume *6);
+    }
+
+    public void PlayWitchCackle()
+    {
+        if (currentTrack == trainHorn)
+        {
+            return;
+        }
+        audioSource.PlayOneShot(witchCackle, volume * 1);
+    }
+
+    public void PlayTenseMusic()
+    {
+        if(currentTrack == tenseMusic)
+        {
+            return;
+        }
+        audioSource.PlayOneShot(tenseMusic, volume * 4);
     }
 
     /// <summary>

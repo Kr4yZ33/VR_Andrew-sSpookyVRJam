@@ -44,5 +44,38 @@ public class TrackTileController : MonoBehaviour
             rb.isKinematic = false;
             rb.AddForce(transform.forward * thrust);
         }
+        if (other.gameObject.CompareTag("JumpScare"))
+        {
+            gameManager.JumpScare();
+        }
+        if (other.gameObject.CompareTag("JumpScareFinish"))
+        {
+            gameManager.JumpScareFinish();
+        }
+        if (other.gameObject.CompareTag("LightsOff"))
+        {
+            Debug.Log("Tile lights off");
+            gameManager.LightsOff();
+        }
+        if (other.gameObject.CompareTag("LightsOn"))
+        {
+            gameManager.LightsOn();
+        }
+        if (other.gameObject.CompareTag("TenseMusic"))
+        {
+            gameManager.TenseMusic();
+        }
+        if (other.gameObject.CompareTag("WitchCackle"))
+        {
+            gameManager.WitchCackle();
+        }
+        if (other.gameObject.CompareTag("Swarm"))
+        {
+            gameManager.ZombieSwarmOn();
+        }
+        if (other.gameObject.CompareTag("SwarmOff"))
+        {
+            gameManager.ZombieSwarmOff();
+        }
     }
 }
