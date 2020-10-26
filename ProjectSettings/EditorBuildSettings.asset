@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/AndrewsVRSpookyJamV1.0.unity
+    guid: 42d00dd816e128d49a9a3134587485f0
   m_configObjects: {}
