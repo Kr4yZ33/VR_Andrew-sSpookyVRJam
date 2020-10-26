@@ -15,6 +15,12 @@ TagManager:
   - EnableMine
   - JumpScare
   - Swarm
+  - XRRig
+  - SmallRig
+  - LargeRig
+  - LightsOn
+  - LightsOff
+  - TenseMusic
   layers:
   - Default
   - TransparentFX

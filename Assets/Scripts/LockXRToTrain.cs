@@ -5,6 +5,7 @@ using UnityEngine;
 public class LockXRToTrain : MonoBehaviour
 {
 
+    public bool usingTrain;
     public Transform xRRig;
     public Transform train;
 

@@ -5,7 +5,15 @@ using UnityEngine;
 public class TrackTileController : MonoBehaviour
 {
     public AudioManager audioManager;
+    public AudioSource audioSource;
     public GameManager gameManager;
+    Rigidbody rb;
+    public float thrust = 5f;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     void OnTriggerEnter(Collider other) // on a collision between this objects rigidbody and another objects rigidbody
     {
@@ -28,6 +36,13 @@ public class TrackTileController : MonoBehaviour
         if (other.gameObject.CompareTag("DisableMine"))
         {
             gameManager.DisableMine();
+        }
+        if (other.gameObject.CompareTag("XRRig"))
+        {
+            gameManager.ChangeToLargeRig();
+            audioSource.Stop();
+            rb.isKinematic = false;
+            rb.AddForce(transform.forward * thrust);
         }
     }
 }
